@@ -7,24 +7,28 @@
         android:layout_marginBottom="20dp"
         android:fadingEdge="none">
 
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/img"
+            android:layout_gravity="center"/>
     <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-        <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:id="@+id/img"
-                android:layout_gravity="center"/>
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimaryDark"
+            android:paddingVertical="30dp"
+            android:paddingHorizontal="10dp"
+    >
         <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:background="@color/colorPrimaryDark"
-                android:padding="10dp">
+                android:layout_width="0dp"
+                android:layout_weight="9"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
             <TextView
                     android:id="@+id/titulo"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:text="Titulo"
@@ -38,15 +42,16 @@
                     android:text="Categoria"
                     android:gravity="center_vertical" android:layout_marginTop="5dp"/>
 
-            <Button android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:text="PLAY ON Youtube"
-                    android:id="@+id/youtube"
-                    android:textColor="@android:color/holo_red_dark"
-                    android:backgroundTint="@android:color/background_light"
 
-                    android:drawableLeft="@drawable/youtube_icon_48"
-            />
         </LinearLayout>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:title="Play on Youtube"
+            android:id="@+id/youtube"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/youtube_outline"
+        />
     </LinearLayout>
 </LinearLayout>

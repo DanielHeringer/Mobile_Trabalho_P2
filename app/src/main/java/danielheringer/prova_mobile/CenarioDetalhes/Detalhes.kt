@@ -1,28 +1,31 @@
 package danielheringer.prova_mobile.CenarioDetalhes
 
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity;
 import android.view.View
 import android.widget.TextView
-import android.widget.Toast
 import danielheringer.prova_mobile.Entidades.Meal
 import danielheringer.prova_mobile.GlideApp
 import danielheringer.prova_mobile.R
 
 import kotlinx.android.synthetic.main.activity_detalhes.*
 import android.content.Intent
-import danielheringer.prova_mobile.CenarioListaRefeicoes.ListaRefeicoes
+import android.net.Uri
+import android.view.MenuItem
+import android.view.Menu
 
 
 class Detalhes : AppCompatActivity() {
 
+    var refeicaoStart : Meal? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detalhes)
 
-        val refeicao : Meal? = intent.getSerializableExtra("refeicao") as Meal
+        val refeicao = intent.getSerializableExtra("refeicao") as Meal
+        refeicaoStart = refeicao
+
         if(refeicao!=null){
             GlideApp.with(this)
                 .load(refeicao.strMealThumb)
@@ -297,6 +300,31 @@ class Detalhes : AppCompatActivity() {
         }
 
 
+    }
+
+    override fun onCreateOptionsMenu(menu : Menu): Boolean {
+        val refeicao = refeicaoStart
+        if(refeicao!!.strYoutube!=null && refeicao.strYoutube!=""){
+            getMenuInflater().inflate(R.menu.detalhes_menu, menu)
+        }
+
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.getItemId()) {
+            R.id.youtube -> {
+                openYoutubeLink(refeicaoStart!!.strYoutube)
+                return true
+            }
+            else -> return super.onOptionsItemSelected(item)
+        }
+    }
+
+    fun openYoutubeLink(youtubeURL: String){
+        val uri = Uri.parse(youtubeURL)
+        val intentBrowser = Intent(Intent.ACTION_VIEW, uri)
+        this.startActivity(intentBrowser)
     }
 
 

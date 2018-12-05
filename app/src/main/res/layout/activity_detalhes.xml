@@ -698,7 +698,6 @@
                 android:padding="10dp"
                 android:paddingBottom="30dp"
                 android:id="@+id/instructions_text"
-
                 android:layout_gravity="center_vertical|right"/>
 
 
