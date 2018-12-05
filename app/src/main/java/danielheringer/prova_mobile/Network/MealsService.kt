@@ -13,4 +13,8 @@ interface MealsService {
     }
     @GET("$API_KEY/latest.php")
     fun getSearch() : Call<MealsList>
+
+
+    @GET("$API_KEY/random.php")
+    fun getRandom(): Call<MealsList>
 }

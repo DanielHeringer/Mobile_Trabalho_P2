@@ -9,9 +9,10 @@ interface ListaRefeicoes_Contract {
         fun hideProgressBar()
         fun showProgressBar()
         fun openYoutubeLink(youtubeURL: String)
+        fun random()
     }
 
     interface Presenter{
-        fun onAtualizaLista(s: String)
+        fun onAtualizaLista(s: String, random : Boolean)
     }
 }

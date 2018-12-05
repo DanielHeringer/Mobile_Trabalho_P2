@@ -10,12 +10,16 @@ import retrofit2.Response
 class ListaRefeicoes_Presenter (val view : ListaRefeicoes_Contract.View) : ListaRefeicoes_Contract.Presenter {
 
 
-    override fun onAtualizaLista(s :String) {
+    override fun onAtualizaLista(s :String, random : Boolean) {
 
         view.showProgressBar()
         val mealsService = RetrofitInitializer().createMealsService()
 
-        val call = mealsService.getSearch()
+        val call : Call<MealsList>
+        if(random)
+            call = mealsService.getRandom()
+        else
+            call = mealsService.getSearch()
 
 
         call.enqueue(object : Callback<MealsList> {

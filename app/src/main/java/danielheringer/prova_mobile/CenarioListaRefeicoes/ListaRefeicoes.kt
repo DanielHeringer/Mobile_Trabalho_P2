@@ -1,11 +1,14 @@
 package danielheringer.prova_mobile.CenarioListaRefeicoes
 
+import android.app.SearchManager
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import danielheringer.prova_mobile.CenarioDetalhes.Detalhes
@@ -13,6 +16,7 @@ import danielheringer.prova_mobile.Entidades.Meal
 import danielheringer.prova_mobile.GlideApp
 import danielheringer.prova_mobile.R
 import danielheringer.prova_mobile.R.id.imageView
+import danielheringer.prova_mobile.R.id.shuffle
 import kotlinx.android.synthetic.main.activity_lista_refeicoes.*
 
 class ListaRefeicoes  : AppCompatActivity(), ListaRefeicoes_Contract.View {
@@ -26,21 +30,40 @@ class ListaRefeicoes  : AppCompatActivity(), ListaRefeicoes_Contract.View {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lista_refeicoes)
 
+
+
         GlideApp.with(this)
-            .load("https://www.minascap.com/LOJA/_lib/img/loadingautentica.gif")
+            .load("http://valefood.com.br/images/loader.gif")
             .into(loadingGif);
 
-        if(intent.getStringExtra("s")!=null){
-            s = intent.getStringExtra("s")
-        }
-        presenter.onAtualizaLista(s)
 
+        presenter.onAtualizaLista(s, false)
 
         //Botao de receitas salvas
 //        Salvos.setOnClickListener {
 //            val minhaLista = Intent(this, MinhaLista::class.java)
 //            startActivity(minhaLista)
 //        }
+    }
+
+    override fun onCreateOptionsMenu(menu : Menu): Boolean {
+        getMenuInflater().inflate(R.menu.lista, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // Handle item selection
+        when (item.getItemId()) {
+            R.id.shuffle -> {
+                random()
+                return true
+            }
+            R.id.home -> {
+                presenter.onAtualizaLista(s, false)
+            return true
+            }
+            else -> return super.onOptionsItemSelected(item)
+        }
     }
 
     override fun showProgressBar() {
@@ -53,6 +76,10 @@ class ListaRefeicoes  : AppCompatActivity(), ListaRefeicoes_Contract.View {
 
     override fun showMsg(s: String) {
         Toast.makeText(this, s, Toast.LENGTH_SHORT).show()
+    }
+
+    override fun random() {
+        presenter.onAtualizaLista(s, true)
     }
     override fun openYoutubeLink(youtubeURL: String){
         val uri = Uri.parse(youtubeURL)

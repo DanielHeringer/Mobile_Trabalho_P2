@@ -13,6 +13,14 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity android:name=".CenarioListaRefeicoes.ListaRefeicoes">
+            android:name=".SearchableActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <meta-data android:name="android.app.searchable"
+                       android:resource="@xml/searchable"/>
+            <meta-data android:name="android.app.default_searchable"
+                       android:value=".SearchableActivity" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -22,9 +30,8 @@
         <activity
                 android:name=".CenarioDetalhes.Detalhes"
                 android:label="@string/title_activity_detalhes"
+                android:parentActivityName=".CenarioListaRefeicoes.ListaRefeicoes"
                 android:theme="@style/AppTheme">
-        </activity>
-        <activity android:name=".CenarioDetalhes.CenarioDetalhes">
         </activity>
     </application>
 

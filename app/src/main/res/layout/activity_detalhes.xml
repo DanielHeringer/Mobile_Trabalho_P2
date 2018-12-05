@@ -10,13 +10,20 @@
         tools:context=".CenarioDetalhes.Detalhes"
         android:id="@+id/detalhes"
 >
-
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
     <LinearLayout
             android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp"
+            android:id="@+id/allIng"
+            android:background="@color/colorPrimaryDark"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="16dp"
+            android:padding="6dp"
             android:paddingBottom="25dp">
         <ImageView
                 android:layout_width="match_parent"
@@ -24,11 +31,13 @@
                 tools:srcCompat="@tools:sample/avatars"
                 android:id="@+id/imageView"
                 android:layout_gravity="center"/>
+
+
         <TextView
                 android:text="@string/list_of_ingredients"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
+                android:textColor="@android:color/white"
                 android:textSize="26sp"
                 android:layout_marginTop="16dp"
         />
@@ -42,21 +51,29 @@
                 android:visibility="gone"
                 android:id="@+id/ingredient_1"
         >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/imgIng1"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+            />
             <TextView
                     android:text="@string/ingredient"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:id="@+id/ingredient_text_1"
+                    android:layout_gravity="center"
             />
             <TextView
-                    android:text="@string/measure"
+                    android:text=""
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:id="@+id/measure_text_1"
                     android:layout_marginLeft="10dp"
-                    android:layout_gravity="right"/>
+                    android:layout_gravity="center"/>
         </LinearLayout>
         <LinearLayout
                 android:layout_width="match_parent"
@@ -67,6 +84,13 @@
                 android:visibility="gone"
                 android:id="@+id/ingredient_2"
         >
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/imgIng2"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+             />
             <TextView
                     android:text="@string/ingredient"
                     android:layout_width="wrap_content"
@@ -75,7 +99,7 @@
                     android:id="@+id/ingredient_text_2"
             />
             <TextView
-                    android:text="@string/measure"
+                    android:text=""
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
@@ -92,6 +116,13 @@
                 android:visibility="gone"
                 android:id="@+id/ingredient_3"
         >
+            <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/imgIng3"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+            />
             <TextView
                     android:text="@string/ingredient"
                     android:layout_width="wrap_content"
@@ -100,7 +131,7 @@
                     android:id="@+id/ingredient_text_3"
             />
             <TextView
-                    android:text="@string/measure"
+                    android:text=""
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
@@ -117,6 +148,13 @@
                 android:visibility="gone"
                 android:id="@+id/ingredient_4"
         >
+            <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/imgIng4"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+            />
             <TextView
                     android:text="@string/ingredient"
                     android:layout_width="wrap_content"
@@ -125,7 +163,7 @@
                     android:id="@+id/ingredient_text_4"
             />
             <TextView
-                    android:text="@string/measure"
+                    android:text=""
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
@@ -142,6 +180,13 @@
                 android:visibility="gone"
                 android:id="@+id/ingredient_5"
         >
+            <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/imgIng5"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+            />
             <TextView
                     android:text="@string/ingredient"
                     android:layout_width="wrap_content"
@@ -150,7 +195,7 @@
                     android:id="@+id/ingredient_text_5"
             />
             <TextView
-                    android:text="@string/measure"
+                    android:text=""
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
@@ -167,6 +212,13 @@
                 android:visibility="gone"
                 android:id="@+id/ingredient_6"
         >
+            <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/imgIng6"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+            />
             <TextView
                     android:text="@string/ingredient"
                     android:layout_width="wrap_content"
@@ -175,7 +227,7 @@
                     android:id="@+id/ingredient_text_6"
             />
             <TextView
-                    android:text="@string/measure"
+                    android:text=""
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
@@ -192,6 +244,13 @@
                 android:visibility="gone"
                 android:id="@+id/ingredient_7"
         >
+            <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/imgIng7"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+            />
             <TextView
                     android:text="@string/ingredient"
                     android:layout_width="wrap_content"
@@ -200,7 +259,7 @@
                     android:id="@+id/ingredient_text_7"
             />
             <TextView
-                    android:text="@string/measure"
+                    android:text=""
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
@@ -217,6 +276,13 @@
                 android:visibility="gone"
                 android:id="@+id/ingredient_8"
         >
+            <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/imgIng8"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+            />
             <TextView
                     android:text="@string/ingredient"
                     android:layout_width="wrap_content"
@@ -225,7 +291,7 @@
                     android:id="@+id/ingredient_text_8"
             />
             <TextView
-                    android:text="@string/measure"
+                    android:text=""
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
@@ -242,6 +308,13 @@
                 android:visibility="gone"
                 android:id="@+id/ingredient_9"
         >
+            <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/imgIng9"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+            />
             <TextView
                     android:text="@string/ingredient"
                     android:layout_width="wrap_content"
@@ -250,7 +323,7 @@
                     android:id="@+id/ingredient_text_9"
             />
             <TextView
-                    android:text="@string/measure"
+                    android:text=""
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
@@ -267,6 +340,13 @@
                 android:visibility="gone"
                 android:id="@+id/ingredient_10"
         >
+            <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/imgIng10"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+            />
             <TextView
                     android:text="@string/ingredient"
                     android:layout_width="wrap_content"
@@ -275,7 +355,7 @@
                     android:id="@+id/ingredient_text_10"
             />
             <TextView
-                    android:text="@string/measure"
+                    android:text=""
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
@@ -292,6 +372,13 @@
                 android:visibility="gone"
                 android:id="@+id/ingredient_11"
         >
+            <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/imgIng11"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+            />
             <TextView
                     android:text="@string/ingredient"
                     android:layout_width="wrap_content"
@@ -300,7 +387,7 @@
                     android:id="@+id/ingredient_text_11"
             />
             <TextView
-                    android:text="@string/measure"
+                    android:text=""
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
@@ -317,6 +404,13 @@
                 android:visibility="gone"
                 android:id="@+id/ingredient_12"
         >
+            <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/imgIng12"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+            />
             <TextView
                     android:text="@string/ingredient"
                     android:layout_width="wrap_content"
@@ -325,7 +419,7 @@
                     android:id="@+id/ingredient_text_12"
             />
             <TextView
-                    android:text="@string/measure"
+                    android:text=""
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
@@ -342,6 +436,13 @@
                 android:visibility="gone"
                 android:id="@+id/ingredient_13"
         >
+            <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/imgIng13"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+            />
             <TextView
                     android:text="@string/ingredient"
                     android:layout_width="wrap_content"
@@ -350,7 +451,7 @@
                     android:id="@+id/ingredient_text_13"
             />
             <TextView
-                    android:text="@string/measure"
+                    android:text=""
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
@@ -367,6 +468,13 @@
                 android:visibility="gone"
                 android:id="@+id/ingredient_14"
         >
+            <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/imgIng14"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+            />
             <TextView
                     android:text="@string/ingredient"
                     android:layout_width="wrap_content"
@@ -375,7 +483,7 @@
                     android:id="@+id/ingredient_text_14"
             />
             <TextView
-                    android:text="@string/measure"
+                    android:text=""
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
@@ -392,6 +500,13 @@
                 android:visibility="gone"
                 android:id="@+id/ingredient_15"
         >
+            <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/imgIng15"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+            />
             <TextView
                     android:text="@string/ingredient"
                     android:layout_width="wrap_content"
@@ -400,7 +515,7 @@
                     android:id="@+id/ingredient_text_15"
             />
             <TextView
-                    android:text="@string/measure"
+                    android:text=""
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
@@ -417,6 +532,13 @@
                 android:visibility="gone"
                 android:id="@+id/ingredient_16"
         >
+            <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/imgIng16"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+            />
             <TextView
                     android:text="@string/ingredient"
                     android:layout_width="wrap_content"
@@ -425,7 +547,7 @@
                     android:id="@+id/ingredient_text_16"
             />
             <TextView
-                    android:text="@string/measure"
+                    android:text=""
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
@@ -442,6 +564,13 @@
                 android:visibility="gone"
                 android:id="@+id/ingredient_17"
         >
+            <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/imgIng17"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+            />
             <TextView
                     android:text="@string/ingredient"
                     android:layout_width="wrap_content"
@@ -450,7 +579,7 @@
                     android:id="@+id/ingredient_text_17"
             />
             <TextView
-                    android:text="@string/measure"
+                    android:text=""
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
@@ -467,6 +596,13 @@
                 android:visibility="gone"
                 android:id="@+id/ingredient_18"
         >
+            <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/imgIng18"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+            />
             <TextView
                     android:text="@string/ingredient"
                     android:layout_width="wrap_content"
@@ -475,7 +611,7 @@
                     android:id="@+id/ingredient_text_18"
             />
             <TextView
-                    android:text="@string/measure"
+                    android:text=""
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
@@ -492,6 +628,13 @@
                 android:visibility="gone"
                 android:id="@+id/ingredient_19"
         >
+            <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/imgIng19"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+            />
             <TextView
                     android:text="@string/ingredient"
                     android:layout_width="wrap_content"
@@ -500,7 +643,7 @@
                     android:id="@+id/ingredient_text_19"
             />
             <TextView
-                    android:text="@string/measure"
+                    android:text=""
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
@@ -517,6 +660,13 @@
                 android:visibility="gone"
                 android:id="@+id/ingredient_20"
         >
+            <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/imgIng20"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+            />
             <TextView
                     android:text="@string/ingredient"
                     android:layout_width="wrap_content"
@@ -525,7 +675,7 @@
                     android:id="@+id/ingredient_text_20"
             />
             <TextView
-                    android:text="@string/measure"
+                    android:text=""
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
@@ -539,21 +689,38 @@
                 android:layout_height="wrap_content"
                 android:textSize="26sp"
                 android:layout_marginTop="20dp"
-                android:textColor="@color/black"
+                android:textColor="@android:color/white"
                 android:text="Instructions:"/>
 
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
-                android:textColor="#3e3e3e"
                 android:text="recipe"
+                android:padding="10dp"
                 android:paddingBottom="30dp"
                 android:id="@+id/instructions_text"
+
                 android:layout_gravity="center_vertical|right"/>
 
 
 
-    </LinearLayout>
 
+        </LinearLayout>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="vertical">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="BRASIL"
+                    android:padding="10dp"
+                    android:id="@+id/from"
+                    android:textColor="@android:color/black"
+                    android:gravity="center"/>
+
+        </LinearLayout>
+    </LinearLayout>
 </ScrollView>

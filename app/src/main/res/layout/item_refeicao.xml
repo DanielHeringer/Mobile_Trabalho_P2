@@ -23,7 +23,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="#efefef"
+                android:background="@color/colorPrimary"
                 android:padding="10dp">
             <TextView
                     android:id="@+id/titulo"
@@ -31,7 +31,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:text="Titulo"
-                    android:textColor="@color/black"
+                    android:textColor="@android:color/white"
                     android:gravity="center_vertical"/>
             <TextView
                     android:id="@+id/categoria"
@@ -41,10 +41,15 @@
                     android:text="Categoria"
                     android:gravity="center_vertical" android:layout_marginTop="5dp"/>
 
+            <Button android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="PLAY ON Youtube"
+                    android:id="@+id/youtube"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:backgroundTint="@android:color/background_light"
+
+                    android:drawableLeft="@drawable/youtube_icon_48"
+            />
         </LinearLayout>
-        <Button android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text="See ON Youtube"
-                android:id="@+id/youtube"/>
     </LinearLayout>
 </LinearLayout>
