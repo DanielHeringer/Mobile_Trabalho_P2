@@ -3,12 +3,12 @@
 
 
     <item android:id="@+id/home"
-          android:icon="@drawable/ic_home_black_24dp"
+          android:icon="@drawable/ic_home_24dp"
           android:title="@string/home"
           app:showAsAction="ifRoom"
     />
     <item android:id="@+id/shuffle"
-          android:icon="@drawable/ic_shuffle_black_24dp"
+          android:icon="@drawable/ic_shuffle_24dp"
           android:title="@string/shuffle"
           app:showAsAction="ifRoom"
     />

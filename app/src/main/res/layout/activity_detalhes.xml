@@ -14,30 +14,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-    <LinearLayout
-            android:layout_marginTop="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:id="@+id/allIng"
-            android:background="@color/colorPrimaryDark"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginBottom="16dp"
-            android:padding="6dp"
-            android:paddingBottom="25dp">
         <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 tools:srcCompat="@tools:sample/avatars"
                 android:id="@+id/imageView"
                 android:layout_gravity="center"/>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/allIng"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="16dp"
+            android:padding="6dp"
+            android:paddingBottom="25dp">
 
 
         <TextView
                 android:text="@string/list_of_ingredients"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@android:color/white"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="26sp"
                 android:layout_marginTop="16dp"
         />
@@ -689,8 +687,8 @@
                 android:layout_height="wrap_content"
                 android:textSize="26sp"
                 android:layout_marginTop="20dp"
-                android:textColor="@android:color/white"
-                android:text="Instructions:"/>
+                android:textColor="@color/colorPrimaryDark"
+                android:text="INSTRUCTION"/>
 
         <TextView
                 android:layout_width="match_parent"
@@ -718,7 +716,7 @@
                     android:text="BRASIL"
                     android:padding="10dp"
                     android:id="@+id/from"
-                    android:textColor="@android:color/black"
+                    android:textColor="@color/colorPrimaryDark"
                     android:gravity="center"/>
 
         </LinearLayout>

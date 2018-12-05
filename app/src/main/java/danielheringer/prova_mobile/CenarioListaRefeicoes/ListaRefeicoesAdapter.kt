@@ -43,10 +43,9 @@ class ListaRefeicoesAdapter (val context: Context, val meals: List<Meal>, val cl
             itemView.titulo.text = meal.strMeal
             itemView.categoria.text = meal.strCategory
 
-            var requestOptions = RequestOptions()
-            requestOptions = requestOptions.transforms(CenterCrop(), RoundedCorners(16))
             GlideApp.with(context)
                 .load(meal.strMealThumb)
+                .placeholder(R.drawable.loading)
                 .centerCrop()
                 .into(itemView.img)
 

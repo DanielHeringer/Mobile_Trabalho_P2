@@ -4,10 +4,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginBottom="20dp"
         android:fadingEdge="none">
 
     <LinearLayout
@@ -23,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorPrimaryDark"
                 android:padding="10dp">
             <TextView
                     android:id="@+id/titulo"
@@ -31,7 +28,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
                     android:text="Titulo"
-                    android:textColor="@android:color/white"
+                    android:textColor="@color/colorAccent"
                     android:gravity="center_vertical"/>
             <TextView
                     android:id="@+id/categoria"

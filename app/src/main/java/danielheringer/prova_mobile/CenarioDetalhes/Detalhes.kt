@@ -11,6 +11,9 @@ import danielheringer.prova_mobile.GlideApp
 import danielheringer.prova_mobile.R
 
 import kotlinx.android.synthetic.main.activity_detalhes.*
+import android.content.Intent
+import danielheringer.prova_mobile.CenarioListaRefeicoes.ListaRefeicoes
+
 
 class Detalhes : AppCompatActivity() {
 
@@ -290,11 +293,12 @@ class Detalhes : AppCompatActivity() {
 
             instructions_text.text = refeicao.strInstructions
 
-           // allIng.getBackground().setAlpha(41)
             from.text = refeicao.strArea
         }
 
 
     }
+
+
 
 }

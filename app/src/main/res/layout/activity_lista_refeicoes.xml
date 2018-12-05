@@ -7,6 +7,7 @@
         android:layout_height="match_parent"
         tools:context=".CenarioListaRefeicoes.ListaRefeicoes"
         tools:showIn="@layout/activity_lista_refeicoes"
+        android:background="@color/colorAccent"
         android:orientation="vertical">
 
     <LinearLayout android:layout_width="match_parent"

@@ -10,6 +10,7 @@ interface ListaRefeicoes_Contract {
         fun showProgressBar()
         fun openYoutubeLink(youtubeURL: String)
         fun random()
+        fun itemClique(refeicao:Meal)
     }
 
     interface Presenter{
